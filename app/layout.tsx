@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans_Thai, Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const ibmPlex = IBM_Plex_Sans_Thai({
+  weight: "400",
+  subsets: ["thai"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={ibmPlex.className}>{children}</body>
     </html>
   );
 }

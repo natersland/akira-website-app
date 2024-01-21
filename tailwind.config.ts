@@ -19,44 +19,23 @@ const config = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        primary: "#00A9FF", // Dark blue, representing the detective theme
+        primaryHover: "#0487C8", // Darker blue for primary color hover effect
+        secondary: "#1A202C", // Lighter blue for secondary elements
+        onPrimary: "#FFFFFF", // Dark text for primary color backgrounds
+        onSecondary: "#FFFFFF",
+        onSurfaceVariant1: "#1A202C",
+        onSurfaceVariant2: "#5CB5F5",
+        onSurfaceVariant3: "#DADADA",
+        onSurfaceVariant4: "#FAF9F9",
+        success: "#2F855A", // Green for success messages
+        error: "#E53E3E", // Red for error messages
+        warning: "#F6AD55", // Yellow for warning messages
+        primaryLight: "#F3FAFF", // Blue for informational messages
+        // Custom Detective Theme Colors
+        detectiveRed: "#B91C1C", // A dark red color for detective-specific elements
+        detectiveYellow: "#FBBF24", // A yellow color for highlights and call-to-action
+        detectiveGray: "#2D3748", // A dark gray color for certain UI elements
       },
       keyframes: {
         "accordion-down": {
@@ -69,8 +48,17 @@ const config = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        spaceship: '/animation/spaceship.json',
+        astro: '/animation/astro.json',
+        astro2: '/animation/astro2.json',
+        astro3: '/animation/astro3.json'
+
+      },
+      image: {
+        placeholder_image: 'url(/image/placeholder.png)'
+      },
+      backgroundImage: {
+        project_bg: 'url(/image/star.png)',
       },
     },
   },

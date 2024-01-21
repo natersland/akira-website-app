@@ -1,21 +1,20 @@
-import { Project } from "./data/entity/project_entity";
-import { getAllProjects } from "./controllers/project_controller";
-import Image from "next/image";
+import Hero from "@/components/section/hero/hero";
+import Navbar from "@/components/section/navbar/navbar";
+import Project from "@/components/section/project/project";
 
-export default async function Home() {
-  const projects = await getAllProjects();
-  return projects.map((project: Project, index: number) => (
-    <div key={index}>
-      <div> ID: {project.id}</div>
-      <p>Category: {project.attributes.category}</p>
-      <h1>Name: {project.attributes.name}</h1>
-      <p>Description: {project.attributes.description}</p>
-      <Image
-        src={`${process.env.AKIRA_WEBSITE_API}${project.attributes.image.data.attributes.formats.medium.url}`}
-        width={500}
-        height={500}
-        alt={project.attributes.name}
-      />
-    </div>
-  ));
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Project />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#F3FAFF"
+          fill-opacity="1"
+          d="M0,160L20,176C40,192,80,224,120,202.7C160,181,200,107,240,112C280,117,320,203,360,218.7C400,235,440,181,480,170.7C520,160,560,192,600,192C640,192,680,160,720,160C760,160,800,192,840,186.7C880,181,920,139,960,101.3C1000,64,1040,32,1080,21.3C1120,11,1160,21,1200,53.3C1240,85,1280,139,1320,144C1360,149,1400,107,1420,85.3L1440,64L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"
+        ></path>
+      </svg>
+    </>
+  );
 }
