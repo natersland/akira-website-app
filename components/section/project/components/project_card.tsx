@@ -22,7 +22,7 @@ const ProjectCard = (props: Props) => {
     <Card className="group overflow-hidden relative">
       <CardHeader className="p-0">
         <ProjectImage
-          imageUrl={project.image.data.attributes.formats.small.url}
+          imageUrl={project.image.data.attributes.formats.medium.url ?? ""}
           link={project.url ?? ""}
           github={""}
         />

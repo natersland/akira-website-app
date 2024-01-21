@@ -7,7 +7,7 @@ export const TypographyVariants = cva(
     variants: {
       intent: {
         display:
-          "mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl",
+          "mb-4 text-5xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl",
         header: "",
         title: "text-xl font-medium",
         label: "block mb-2 text-sm font-medium",

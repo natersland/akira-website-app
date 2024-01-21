@@ -26,7 +26,7 @@ const config = {
         onSecondary: "#FFFFFF",
         onSurfaceVariant1: "#1A202C",
         onSurfaceVariant2: "#5CB5F5",
-        onSurfaceVariant3: "#DADADA",
+        onSurfaceVariant3: "#C5C5C5",
         onSurfaceVariant4: "#FAF9F9",
         success: "#2F855A", // Green for success messages
         error: "#E53E3E", // Red for error messages
