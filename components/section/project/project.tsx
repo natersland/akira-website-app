@@ -23,7 +23,10 @@ const Project = async (props: Props) => {
             text={"All Projects"}
           />
           <p className="subtitle mb-8">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Step into a world where code meets creativity. Each project in this
+            gallery not only showcases technical skills but tells a story of
+            challenge, innovation, and triumph in the realm of software
+            development.
           </p>
         </div>
         {/* <h2 className="text-2xl md:text-3xl font-bold mb-8">
