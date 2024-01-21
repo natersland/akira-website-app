@@ -5,6 +5,7 @@ export interface Project {
         description: string;
         category: string;
         url: string;
+        githubUrl: string;
         image: {
             data: {
                 attributes: {

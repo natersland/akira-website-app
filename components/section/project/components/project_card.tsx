@@ -24,7 +24,7 @@ const ProjectCard = (props: Props) => {
         <ProjectImage
           imageUrl={project.image.data.attributes.formats.medium.url ?? ""}
           link={project.url ?? ""}
-          github={""}
+          github={project.githubUrl ?? ""}
         />
       </CardHeader>
       <div className="h-full px-8 py-6">

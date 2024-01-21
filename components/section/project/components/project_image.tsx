@@ -11,6 +11,7 @@ type Props = {
 };
 
 function ProjectImage(props: Props) {
+  console.log(props.github);
   return (
     <div className="relative w-full h-[300px] flex items-center justify-center bg-primaryLight bg-project_bg">
       <Image
