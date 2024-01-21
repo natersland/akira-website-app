@@ -34,7 +34,7 @@ const Hero = (props: Props) => {
                 text={"Chenyavanij".toLocaleUpperCase()}
               />
             </div>
-            <p className="text-secondary text-xl flex pb-4">
+            <p className="text-secondary text-xl flex pb-4 text-start sm:text-center md:text-center">
               {`I'm a`}
               <span className="ml-1">
                 <Typewriter
