@@ -2,7 +2,7 @@ import { Github, Link2Icon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import ProjectIconLink from "./project_icon_link";
+import ProjectIconLink from "./icon_link";
 
 type Props = {
   imageUrl: string;

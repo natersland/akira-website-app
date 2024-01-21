@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import React from "react";
 import { toast } from "sonner";
+import AkTypography from "@/components/typography/typography";
 
 type Props = {
   trickerConponent: React.ReactNode;
@@ -39,8 +40,13 @@ const EmailDialog = (props: Props) => {
         <DialogHeader>
           <DialogTitle>Contact Me</DialogTitle>
           <DialogDescription>
-            Interested in collaborating or learning more about my work? I'd love
-            to connect! Send me a message, and let's start a conversation.
+            <AkTypography
+              intent={"body2"}
+              color={"secondary"}
+              text={
+                "Interested in collaborating or learning more about my work?\nI'd love to connect! Send me a message, and let's start a conversation."
+              }
+            />
           </DialogDescription>
         </DialogHeader>
         <div className="flex items-center space-x-2">
