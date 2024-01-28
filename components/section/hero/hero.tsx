@@ -2,7 +2,7 @@
 import { Download, Send } from "lucide-react";
 import React from "react";
 import HeroButton from "./components/hero_button";
-import AkTypography from "@/components/typography/typography";
+import AkTypography from "@/components/akira_uikit/typography/typography";
 import { Player } from "@lottiefiles/react-lottie-player";
 import config from "@/tailwind.config";
 import Typewriter from "typewriter-effect";
@@ -62,6 +62,7 @@ const Hero = (props: Props) => {
                   />
                 }
               />
+              <div className="flex flex-col">
               <HeroButton
                 buttonType={"Secondary"}
                 icon={<Download size={18} />}
@@ -72,7 +73,12 @@ const Hero = (props: Props) => {
                     "https://drive.google.com/file/d/1Wz4q_e05S4Y1C5a2ScKOvmzWbF4nuDst/view?usp=sharing"
                   )
                 }
+
               />
+              // TODO implement this
+              {/* <AkTypography className="mt-2" intent={"label"} color={"onSurface2"} text={"Last Update: "}/> */}
+              </div>
+              
             </div>
             {/* <AkTypography
               intent={"label"}
