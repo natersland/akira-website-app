@@ -1,6 +1,6 @@
 import React from "react";
 import { TypographyVariants } from "../variants/typography_variants";
-import { TypographyProps } from "@/components/typography/typography";
+import { TypographyProps } from "@/components/akira_uikit/typography/typography";
 
 function Title({ text, intent, color, style, className }: TypographyProps) {
   return (

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ProjectCard from "./components/project_card";
-import AkTypography from "@/components/typography/typography";
+import AkTypography from "@/components/akira_uikit/typography/typography";
 
 type Props = {};
 

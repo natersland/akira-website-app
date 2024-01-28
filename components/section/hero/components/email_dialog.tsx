@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import React from "react";
 import { toast } from "sonner";
-import AkTypography from "@/components/typography/typography";
+import AkTypography from "@/components/akira_uikit/typography/typography";
 
 type Props = {
   trickerConponent: React.ReactNode;

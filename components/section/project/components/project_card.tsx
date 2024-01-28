@@ -10,7 +10,7 @@ import React from "react";
 import ProjectImage from "./project_image";
 import { Badge } from "@/components/ui/badge";
 import { Project } from "@/app/data/entity/project_entity";
-import AkTypography from "@/components/typography/typography";
+import AkTypography from "@/components/akira_uikit/typography/typography";
 
 type Props = {
   project: Project;

@@ -1,4 +1,4 @@
-import AkTypography from "@/components/typography/typography";
+import AkTypography from "@/components/akira_uikit/typography/typography";
 import React from "react";
 
 type Props = {

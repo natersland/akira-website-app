@@ -1,5 +1,5 @@
 import React from "react";
-import { TypographyProps } from "@/components/typography/typography";
+import { TypographyProps } from "@/components/akira_uikit/typography/typography";
 import { TypographyVariants } from "../variants/typography_variants";
 
 type Props = {};

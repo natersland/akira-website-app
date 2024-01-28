@@ -44,7 +44,7 @@ function AkTypography({
   switch (intent) {
     case "display":
       content = (
-        <Display intent={intent} color={color} text={text} style={style} />
+        <Display intent={intent} color={color} text={text} style={style} className={className} />
       );
       break;
     case "header":
@@ -52,22 +52,22 @@ function AkTypography({
       break;
     case "title":
       content = (
-        <Title intent={intent} color={color} text={text} style={style} />
+        <Title intent={intent} color={color} text={text} style={style} className={className} />
       );
       break;
     case "label":
       content = (
-        <Label intent={intent} color={color} text={text} style={style} />
+        <Label intent={intent} color={color} text={text} style={style} className={className} />
       );
       break;
     case "body1":
       content = (
-        <Body intent={intent} color={color} text={text} style={style} />
+        <Body intent={intent} color={color} text={text} style={style} className={className} />
       );
       break;
     case "body2":
       content = (
-        <Body intent={intent} color={color} text={text} style={style} />
+        <Body intent={intent} color={color} text={text} style={style} className={className} />
       );
       break;
     case "button":
@@ -81,6 +81,7 @@ function AkTypography({
           text={text}
           link={link}
           style={style}
+          className={className}
         />
       );
       break;
