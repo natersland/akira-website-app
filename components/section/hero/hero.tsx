@@ -75,7 +75,7 @@ const Hero = (props: Props) => {
                 }
 
               />
-              // TODO implement this
+              {/* // TODO implement this */}
               {/* <AkTypography className="mt-2" intent={"label"} color={"onSurface2"} text={"Last Update: "}/> */}
               </div>
               
