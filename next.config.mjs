@@ -4,9 +4,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "akira-website-api.onrender.com",
+        hostname: "res.cloudinary.com",
         port: "",
-        pathname: "/uploads/**",
+        pathname: "/dz74pimt6/image/upload/**",
       },
     ],
   },
