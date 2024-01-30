@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import Logo from "./components/logo";
 import NavLink from "./components/nav_link";
-import { useNavBarStore } from "@/app/store/navbar_store";
-import { useNavBarSelector } from "@/app/selector/nav_bar_selector";
+import { useNavBarStore } from "@/app/presentation/store/navbar_store";
+import { useNavBarSelector } from "@/app/presentation/selector/nav_bar_selector";
 
 type Props = {};
 

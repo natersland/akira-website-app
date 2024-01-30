@@ -1,15 +1,13 @@
-import { getAllProjects } from "@/app/controllers/project_controller";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
+
 import React from "react";
 import ProjectCard from "./components/project_card";
 import AkTypography from "@/components/akira_uikit/typography/typography";
+import { ProjectController } from "@/app/controllers/project_controller";
 
 type Props = {};
 
 const Project = async (props: Props) => {
-  const projects = await getAllProjects();
+  const projects = await ProjectController.getAllProjects();
   const projectCategory: string[] = ["All", "Web", "Mobile", "Game", "Others"];
 
   return (

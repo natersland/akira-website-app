@@ -3,6 +3,7 @@ import Navbar from "@/components/section/navbar/navbar";
 import Project from "@/components/section/project/project";
 
 export default function Home() {
+
   return (
     <>
       <Navbar />

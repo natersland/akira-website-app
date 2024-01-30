@@ -1,6 +1,6 @@
 "use client";
 import { Download, Send } from "lucide-react";
-import React from "react";
+import React, { use, useEffect } from "react";
 import HeroButton from "./components/hero_button";
 import AkTypography from "@/components/akira_uikit/typography/typography";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -8,11 +8,22 @@ import config from "@/tailwind.config";
 import Typewriter from "typewriter-effect";
 import { openUrlExtension } from "@/app/common/extension/openurl_extension";
 import EmailDialog from "./components/email_dialog";
+import { ResumeController } from "@/app/controllers/resume_controller";
+import { useResumeSelector } from "@/app/presentation/selector/resume_selector";
+import { useResumeStore } from "@/app/presentation/store/resume_store";
 
 type Props = {};
 
 const Hero = (props: Props) => {
   const animationURL = config.theme.extend.animation.astro3 ?? "";
+  const { resumeUrl, updatedAt } = useResumeStore();
+
+  useEffect(() => {
+    ResumeController.getResume();
+  }, []);
+
+  console.log(resumeUrl);
+  console.log(updatedAt);
 
   return (
     <section
@@ -63,28 +74,22 @@ const Hero = (props: Props) => {
                 }
               />
               <div className="flex flex-col">
-              <HeroButton
-                buttonType={"Secondary"}
-                icon={<Download size={18} />}
-                text={"Download CV"}
-                isDownload={true}
-                onClick={() =>
-                  openUrlExtension(
-                    "https://drive.google.com/file/d/1Wz4q_e05S4Y1C5a2ScKOvmzWbF4nuDst/view?usp=sharing"
-                  )
-                }
-
-              />
-              {/* // TODO implement this */}
-              {/* <AkTypography className="mt-2" intent={"label"} color={"onSurface2"} text={"Last Update: "}/> */}
+                <HeroButton
+                  buttonType={"Secondary"}
+                  icon={<Download size={18} />}
+                  text={"Download CV"}
+                  disabled={resumeUrl != null ? false : true}
+                  onClick={
+                    resumeUrl ? () => openUrlExtension(resumeUrl) : undefined
+                  }
+                />
               </div>
-              
             </div>
-            {/* <AkTypography
+            <AkTypography
               intent={"label"}
               color={"onSurface2"}
-              text={"Last Updated: 21 Jan 2024"}
-            /> */}
+              text={`Last Update: ${updatedAt ?? "N/A"}`}
+            />
             {/* socials */}
             {/* <Socials
               containerStyles="flex gap-x-6 mx-auto xl:mx-0"

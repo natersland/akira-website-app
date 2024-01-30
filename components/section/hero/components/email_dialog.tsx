@@ -44,7 +44,7 @@ const EmailDialog = (props: Props) => {
               intent={"body2"}
               color={"secondary"}
               text={
-                "Interested in collaborating or learning more about my work?\nI'd love to connect! Send me a message, and let's start a conversation."
+                "Send me a message, and let's start a conversation."
               }
             />
           </DialogDescription>
