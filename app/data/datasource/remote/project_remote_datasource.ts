@@ -90,7 +90,7 @@ const mockProjects: Project[] = [
     id: 5,
     attributes: {
       name: "Akira Portfolio Website",
-      description: "A blogging platform allowing users to write and share articles.",
+      description: "My personal portfolio website.",
       category: "Web",
       url: "https://blogplatform.com",
       githubUrl: "https://github.com/natersland/akira-website-app",
