@@ -1,5 +1,6 @@
 import CommonTooltip from "@/components/common/common_tooltip";
 import { Button } from "@/components/ui/button";
+import { on } from "events";
 import Link from "next/link";
 import React from "react";
 
@@ -12,27 +13,34 @@ type Props = {
   onClick?: () => void;
 };
 
-const HeroButton = (props: Props) => {
+const HeroButton = ({
+  buttonType,
+  icon,
+  text,
+  disabled,
+  onClick,
+  linkToSection,
+}: Props) => {
   const buildButton = (
-    <Link href={props.linkToSection ?? ""}>
+    <Link href={linkToSection ?? ""}>
       <Button
         className={`gap-x-2 rounded-full ${
-          props.buttonType === "Primary"
+          buttonType === "Primary"
             ? "bg-primary text-white"
             : "bg-white text-primary border border-primary hover:bg-primaryLight hover:text-primary"
         } transition-all duration-300`}
-        disabled={props.disabled ?? false}
-        onClick={props.onClick}
+        disabled={disabled}
+        onClick={onClick}
       >
-        {props.text} {props.icon}
+        {text} {icon}
       </Button>
     </Link>
   );
 
-  return props.disabled ? (
+  return disabled ? (
     <CommonTooltip
       tooltipTrigger={buildButton}
-      tooltipContent={"Coming soon!"}
+      tooltipContent={"Comming Soon! 🚀 Reach out to contact me discuss more."}
     />
   ) : (
     buildButton

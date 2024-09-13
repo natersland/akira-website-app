@@ -6,21 +6,21 @@ import AkTypography from "@/components/akira_uikit/typography/typography";
 import { Player } from "@lottiefiles/react-lottie-player";
 import config from "@/tailwind.config";
 import Typewriter from "typewriter-effect";
-import { openUrlExtension } from "@/app/common/extension/openurl_extension";
 import EmailDialog from "./components/email_dialog";
-import { ResumeController } from "@/app/controllers/resume_controller";
-import { useResumeSelector } from "@/app/presentation/selector/resume_selector";
 import { useResumeStore } from "@/app/presentation/store/resume_store";
+import { NavigationExtensionImpl } from "@/app/core/extensions/navigation_extension";
 
 type Props = {};
 
-const Hero = (props: Props) => {
+const Hero = ({}: Props) => {
   const animationURL = config.theme.extend.animation.astro3 ?? "";
-  const { resumeUrl, updatedAt } = useResumeStore();
+  const { resumeUrl, updatedAt, isEnabledDownloadCV, fetchResumeData } =
+    useResumeStore();
+  const navigationExtension = new NavigationExtensionImpl();
 
   useEffect(() => {
-    ResumeController.getResume();
-  }, []);
+    fetchResumeData();
+  }, [fetchResumeData]);
 
   console.log(resumeUrl);
   console.log(updatedAt);
@@ -47,9 +47,9 @@ const Hero = (props: Props) => {
               />
             </div>
             <p className="text-secondary text-xl flex pb-4 justify-center sm:justify-center md:justify-center lg:justify-start">
-              {`I'm a`}
               <span className="ml-1">
-                <Typewriter
+                {/* // TODO it's bug here, find other lib or other way to implement */}
+                {/* <Typewriter
                   options={{
                     strings: [
                       "Web Developer",
@@ -59,7 +59,7 @@ const Hero = (props: Props) => {
                     autoStart: true,
                     loop: true,
                   }}
-                />
+                /> */}
               </span>
             </p>
             {/* buttons */}
@@ -73,14 +73,17 @@ const Hero = (props: Props) => {
                   />
                 }
               />
+
               <div className="flex flex-col">
                 <HeroButton
                   buttonType={"Secondary"}
                   icon={<Download size={18} />}
                   text={"Download CV"}
-                  disabled={resumeUrl != null ? false : true}
+                  disabled={!isEnabledDownloadCV}
                   onClick={
-                    resumeUrl ? () => openUrlExtension(resumeUrl) : undefined
+                    resumeUrl
+                      ? () => navigationExtension.openUrl(resumeUrl)
+                      : undefined
                   }
                 />
               </div>
@@ -88,7 +91,7 @@ const Hero = (props: Props) => {
             <AkTypography
               intent={"label"}
               color={"onSurface2"}
-              text={`Last Update: ${updatedAt ?? "N/A"}`}
+              text={`Last updated: ${updatedAt}`}
             />
             {/* socials */}
             {/* <Socials

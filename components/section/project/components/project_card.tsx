@@ -35,9 +35,21 @@ const ProjectCard = (props: Props) => {
           <h1 className="text-2xl font-semibold leading-none tracking-tight text-center">
             {project.name ?? "Untitled"}
           </h1>
-          <p className="text-sm text-muted-foreground text-center mt-2">
-            {project.description ?? "No description"}
-          </p>
+          <div className="flex flex-col">
+            <p className="text-sm text-muted-foreground text-center mt-2">
+              {project.description ?? "No description"}
+            </p>
+            <div
+              className="flex gap-2 mt-4 justify-center
+            items-center"
+            >
+              {project.technologies.map((tech: string, index: number) => (
+                <Badge className="text-xs text-onPrimary" key={index}>
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </Card>

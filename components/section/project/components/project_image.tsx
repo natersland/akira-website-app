@@ -1,6 +1,5 @@
 import { Github, Link2Icon } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import ProjectIconLink from "./icon_link";
 
@@ -16,8 +15,8 @@ function ProjectImage(props: Props) {
       <Image
         className="absolute bottom-50 shadow-2xl mt-4"
         src={
-          `${props.imageUrl}` ??
-          "bg-placeholder_image"
+          props.imageUrl ??
+          "https://res.cloudinary.com/dz74pimt6/image/upload/v1688884095/detective_lib3gp.png"
         }
         width={347}
         height={350}
