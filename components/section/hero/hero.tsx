@@ -88,11 +88,13 @@ const Hero = ({}: Props) => {
                 />
               </div>
             </div>
-            <AkTypography
-              intent={"label"}
-              color={"onSurface2"}
-              text={`Last updated: ${updatedAt}`}
-            />
+            {isEnabledDownloadCV && (
+              <AkTypography
+                intent={"label"}
+                color={"onSurface2"}
+                text={`Last CV updated: ${updatedAt}`}
+              />
+            )}
             {/* socials */}
             {/* <Socials
               containerStyles="flex gap-x-6 mx-auto xl:mx-0"
