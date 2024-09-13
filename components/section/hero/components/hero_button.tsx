@@ -40,7 +40,9 @@ const HeroButton = ({
   return disabled ? (
     <CommonTooltip
       tooltipTrigger={buildButton}
-      tooltipContent={"Comming Soon! 🚀 Reach out to contact me discuss more."}
+      tooltipContent={
+        "Comming Soon! 🚀 Reach out to contact me for discuss more."
+      }
     />
   ) : (
     buildButton
