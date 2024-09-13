@@ -92,7 +92,7 @@ const mockProjects: Project[] = [
       name: "Akira Portfolio Website",
       description: "My personal portfolio website.",
       category: "Web",
-      url: "https://blogplatform.com",
+      url: "https://akira-website-app.vercel.app/",
       githubUrl: "https://github.com/natersland/akira-website-app",
       imageUrl: "https://res.cloudinary.com/dz74pimt6/image/upload/v1706602726/akira-website/5_a6288s.png",
       technologies: ["NextJs", "Zustand", "Golang", "Gin", "Supabase"],
