@@ -93,7 +93,7 @@ const mockProjects: Project[] = [
       description: "A blogging platform allowing users to write and share articles.",
       category: "Web",
       url: "https://blogplatform.com",
-      githubUrl: "https://github.com/user/blogplatform",
+      githubUrl: "https://github.com/natersland/akira-website-app",
       imageUrl: "https://res.cloudinary.com/dz74pimt6/image/upload/v1706602726/akira-website/5_a6288s.png",
       technologies: ["NextJs", "Zustand", "Golang", "Gin", "Supabase"],
     },
